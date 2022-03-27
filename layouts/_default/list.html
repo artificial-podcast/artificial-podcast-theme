@@ -6,7 +6,7 @@
 {{ $Pages = where site.RegularPages "Type" "in" .Site.Params.mainSections }}
 {{ end }}
 
-<article>
+<episodes>
   <ul class="archive">
     {{- range $Pages }}
     <li>
@@ -17,6 +17,6 @@
     {{- end }}
   </ul>
   {{ .Content }}
-</article>
+</episodes>
 
 {{ end }}

@@ -10,6 +10,12 @@
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+  font-family: "PT Serif";
+  src: local("PT Serif"), local("PTSerif-Regular"), url("../fonts/PTSerif-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 
 html {
   font-size: 16px;
@@ -37,7 +43,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+  /*font-weight: 600;*/
 }
 
 b, strong, th {
@@ -62,15 +68,6 @@ header a, footer a, aside a {
 
 header time {
   color: #909194;
-}
-
-hr {
-  border: 1px solid rgba(144, 145, 148, 0.3);
-  margin: 2em 0;
-}
-
-article:not(:last-of-type) {
-  border-bottom: 1.5px solid rgba(144, 145, 148, 0.2);
 }
 
 img, li {
@@ -110,13 +107,12 @@ pre {
   overflow-x: auto;
 }
 
-:not(pre) > code {
-  font-size: 0.9em;
-  background: rgba(144, 145, 148, 0.15);
-  opacity: 0.7;
-  border-radius: 2px;
-  margin: 0 0.1em;
-  padding: 0.2em 0.4em;
+nav {
+  margin: 0.5em -1em;
+}
+
+nav a {
+  margin: 0.5em 1em;
 }
 
 body > header, body > footer {
@@ -124,27 +120,6 @@ body > header, body > footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-}
-
-body > header, body > article, body > footer {
-  padding: 1.5em;
-}
-
-article header {
-  margin-bottom: 1.5em;
-}
-
-article header h1 {
-  font-size: 1.5em;
-  margin: 0 0 0.1em;
-}
-
-nav {
-  margin: 0.5em -1em;
-}
-
-nav a {
-  margin: 0.5em 1em;
 }
 
 body > header {
@@ -158,13 +133,18 @@ body > footer {
 }
 
 @media (min-width: 38em) {
-  body > header, body > article, body > footer {
-    padding: 1.5em calc(38% - 14em);
+  body > header, body > footer {
+    padding: 1.0em;
   }
 }
 
 .title {
   font-size: 1.5em;
+}
+
+episodes ul {
+  list-style-type: none;
+  padding-left: 1.0em;
 }
 
 .archive {
@@ -175,4 +155,33 @@ body > footer {
   display: inline-block;
   min-width: 10ch;
   margin: 0 0.2em;
+}
+
+.episode {
+  padding-left: 1.0em;
+  padding-right: 1.0em;
+}
+
+.episode header {
+}
+
+.episode header h1 {
+  font-size: 2.0em;
+  margin: 0em;
+}
+
+.episode .metadata {
+  margin-top: 0.5em;
+}
+
+.episode .audio {
+  margin-top: 1.5em;
+}
+
+.episode .story {
+  font-family: "PT Serif", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+  font-size: medium;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 1.5em;
 }
